@@ -50,4 +50,11 @@ The goal of PRISM is to evolve from a simple gesture controller into a **persona
 
 The project is also being developed as an exploration of **computer vision, human-computer interaction, automation, and artificial intelligence**.
 
+How To Install:
+In windows (if you have git GUI installed):
+git clone https://github.com/Prithwis1201/Project_PRISM.git (in cmd)
 
+or, simply just download the models folder and copy and paste the main.py code into an editor, save and run it.
+
+Then: 
+navigate to the directory where you have downloaded it and run main.py file
