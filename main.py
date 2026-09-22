@@ -3,8 +3,10 @@ import mediapipe as mp
 from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 import subprocess
+import win32gui
+import win32con
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 base_options = python.BaseOptions(
     model_asset_path="C:/Users/USER/Documents/Python/Project_PRISM/models/hand_landmarker.task"
@@ -21,6 +23,15 @@ gesture_state = "IDLE"
 swipe_start_x = None
 
 SWIPE_DISTANCE = 0.15
+
+def maximize_all_windows():
+
+    def maximize_window(hwnd, extra):
+
+        if win32gui.IsWindowVisible(hwnd):
+            win32gui.ShowWindow(hwnd, win32con.SW_MAXIMIZE)
+
+    win32gui.EnumWindows(maximize_window, None)
 
 def execute_gesture(direction):
 
@@ -44,6 +55,8 @@ def execute_gesture(direction):
                 ["cmd", "/c", "start", "", "chrome", 
                  "https://www.youtube.com"]
             )       
+
+        maximize_all_windows()
 
         print("PRISM SYSTEMS: Workspace Initialized Successfully.")
 
