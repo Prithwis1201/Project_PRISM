@@ -1,3 +1,5 @@
+#CHANGElOGS for Project_PRISM
+
 **20.09.2026:**
 1) Started building PRISM SYSTEMS 
 2) Estabilished the opencv video feed and setup the mediapipe pipeline
